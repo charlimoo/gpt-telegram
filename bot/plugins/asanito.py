@@ -49,7 +49,7 @@ class AsanitoPlugin(Plugin):
                     },
                     "mobiles": {
                         "type": "string",
-                        "description": "Phone number of the person",
+                        "description": "Phone number of the person, should be in latin numbers without extra characters. e.g. 09123456789",
                     },
                     "genderID": {
                         "type": "number",
