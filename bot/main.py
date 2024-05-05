@@ -1,6 +1,6 @@
 import logging
 import os
-
+from datetime import datetime, timedelta
 from dotenv import load_dotenv
 
 from plugin_manager import PluginManager
@@ -30,6 +30,22 @@ def main():
     model = os.environ.get('OPENAI_MODEL', 'gpt-3.5-turbo')
     functions_available = are_functions_available(model=model)
     max_tokens_default = default_max_tokens(model=model)
+    
+    # Define the UTC offset for Tehran timezone (3 hours and 30 minutes ahead of UTC)
+    tehran_offset = timedelta(hours=3, minutes=30)
+
+    # Get the current time in UTC
+    utc_now = datetime.utcnow()
+
+    # Add Tehran timezone offset to get the current time in Tehran timezone
+    tehran_now = utc_now + tehran_offset
+
+    # Format the current time in Tehran timezone
+    current_time = tehran_now.strftime("%Y-%m-%dT%H:%M")
+    
+    
+    
+    
     openai_config = {
         'api_key': os.environ['OPENAI_API_KEY'],
         'show_usage': os.environ.get('SHOW_USAGE', 'false').lower() == 'true',
@@ -37,7 +53,7 @@ def main():
         'proxy': os.environ.get('PROXY', None) or os.environ.get('OPENAI_PROXY', None),
         'max_history_size': int(os.environ.get('MAX_HISTORY_SIZE', 15)),
         'max_conversation_age_minutes': int(os.environ.get('MAX_CONVERSATION_AGE_MINUTES', 180)),
-        'assistant_prompt': os.environ.get('ASSISTANT_PROMPT', 'You are a helpful assistant.'),
+        'assistant_prompt': os.environ.get('ASSISTANT_PROMPT', 'You are a helpful assistant.')  + f" The current time is {current_time}",
         'max_tokens': int(os.environ.get('MAX_TOKENS', max_tokens_default)),
         'n_choices': int(os.environ.get('N_CHOICES', 1)),
         'temperature': float(os.environ.get('TEMPERATURE', 1.0)),

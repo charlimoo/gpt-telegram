@@ -203,9 +203,9 @@
         "stats_description":"آمار استفاده فعلی خود را دریافت کنید",
         "resend_description":"آخرین پیام را دوباره ارسال کنید",
         "chat_description":"چت با ربات!",
-        "disallowed":"با عرض پوزش، شما مجاز به استفاده از این ربات نیستید. می‌توانید کد منبع را در https://github.com/n3d1117/chatgpt-telegram-bot بررسی کنید",
+        "disallowed":"با عرض پوزش، شما مجاز به استفاده از این ربات نیستید.",
         "budget_limit":"با عرض پوزش، شما به حد مجاز استفاده خود رسیده‌اید.",
-        "help_text":["من یک ربات ChatGPT هستم، با من صحبت کنید!", "برای من پیام صوتی یا فایل بفرستید تا آن را برای شما رونویسی کنم", "منبع باز در https://github.com/n3d1117/chatgpt-telegram-bot"],
+        "help_text":["من یک ربات ChatGPT هستم، با من صحبت کنید!", "برای من پیام صوتی یا فایل بفرستید تا آن را برای شما رونویسی کنم", " "],
         "stats_conversation":["مکالمه فعلی", "پیام چت در تاریخچه", "توکن چت در تاریخچه"],
         "usage_today":"استفاده امروز",
         "usage_month":"استفاده این ماه",
@@ -242,7 +242,7 @@
         "answer_with_chatgpt":"با ChatGPT پاسخ دهید",
         "ask_chatgpt":"از ChatGPT بپرسید",
         "loading":"در حال بارگذاری...",
-        "function_unavailable_in_inline_mode": "این عملکرد در حالت آنلاین در دسترس نیست"
+        "function_unavailable_in_inline_mode": "این عملکرد در این حالت در دسترس نیست"
     },
     "fi": {
         "help_description":"Näytä ohjeet",
