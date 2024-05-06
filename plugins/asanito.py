@@ -183,11 +183,11 @@ class AsanitoPlugin(Plugin):
                 },
                 "remindDate": {
                     "type": "string",
-                    "description": "reminder date. by default set the reminder date for tomorrow morning. make sure you format the date like this: %Y-%m-%dT%H:%M (AD date)",
+                    "description": "reminder date. by default set the reminder date for tomorrow morning. make sure you format the date like this: %Y-%m-%dT%H:%M. e.g. 2024-03-20T00:00",
                 },
                 "dueDate": {
                     "type": "string",
-                    "description": "due date. optional",
+                    "description": "due date. optional. make sure you format the date like this: %Y-%m-%dT%H:%M. e.g. 2024-03-20T00:00",
                 }
             },
             "required": ["title","description", "remindDate"]
